@@ -1,0 +1,26 @@
+{
+    "name": "mbed-MQTT",
+    "keywords": "MQTT",
+    "description": "A library for MQTT on mbed",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ARMmbed/mbed-mqtt.git"
+    },
+    "version": "1.0.0",
+    "frameworks": "mbed",
+    "platforms": "*",
+    "build": {
+        "flags": [
+            "-I paho_mqtt-sn_embedded_c/MQTTSNClient/src",
+            "-I paho_mqtt-sn_embedded_c/MQTTSNPacket/src",
+            "-I paho_mqtt_embedded_c/MQTTClient/src",
+            "-I paho_mqtt_embedded_c/MQTTClient/src/mbed",
+            "-I paho_mqtt_embedded_c/MQTTPacket/src"
+        ],
+        "srcFilter": [
+            "+<*.cpp>",
+            "+<../paho_mqtt_embedded_c/MQTTPacket/src/*.c>",
+            "+<../paho_mqtt-sn_embedded_c/MQTTSNPacket/src/*.c>"
+        ]
+    }
+}
