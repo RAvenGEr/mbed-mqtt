@@ -10,17 +10,7 @@
     "frameworks": "mbed",
     "platforms": "*",
     "build": {
-        "flags": [
-            "-I paho_mqtt-sn_embedded_c/MQTTSNClient/src",
-            "-I paho_mqtt-sn_embedded_c/MQTTSNPacket/src",
-            "-I paho_mqtt_embedded_c/MQTTClient/src",
-            "-I paho_mqtt_embedded_c/MQTTClient/src/mbed",
-            "-I paho_mqtt_embedded_c/MQTTPacket/src"
-        ],
-        "srcFilter": [
-            "+<*.cpp>",
-            "+<../paho_mqtt_embedded_c/MQTTPacket/src/*.c>",
-            "+<../paho_mqtt-sn_embedded_c/MQTTSNPacket/src/*.c>"
-        ]
+        "builder": "MbedLibBuilder",
+        "extraScript": "copy_sources.py"
     }
 }
